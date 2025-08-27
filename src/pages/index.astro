@@ -1,0 +1,34 @@
+---
+// Welcome to your new Astro website!
+// Import the Image component for optimized images
+import { Image } from 'astro:assets';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Welcome to Your New Website</title>
+  </head>
+  <body>
+    <main class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+          🚀 Your Website is Ready!
+        </h1>
+        <p class="text-xl text-gray-600 mb-8">
+          This Astro site was created with Website Studio
+        </p>
+        <div class="bg-white rounded-lg shadow-lg p-6 max-w-md">
+          <p class="text-gray-700">
+            Your website will be built here with your custom content, 
+            photos, and styling. Images will be automatically optimized 
+            using Astro's built-in image optimization!
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

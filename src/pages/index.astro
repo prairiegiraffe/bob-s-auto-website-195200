@@ -1,23 +1,24 @@
 ---
-// index.astro page
-const pageTitle = 'Index';
+import Layout from '../layouts/Layout.astro';
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <main class="min-h-screen bg-gray-50 py-12">
-      <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">{pageTitle}</h1>
-        <div class="bg-white rounded-lg shadow-sm p-8">
-          <p class="text-gray-600">This is the {pageTitle.toLowerCase()} page. Content will be added here.</p>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title="Home">
+  <Layout 
+    headline="Stop Wasting Time on Parts Store Runs That Leave You Empty-Handed"
+    content="Tired of driving to three different auto parts stores only to hear &quot;we&#39;ll have to order that&quot; or getting sold the wrong part that doesn&#39;t fit? Bob&#39;s Auto eliminates the guesswork and wasted trips by leveraging our extensive supplier network and local automotive expertise to locate exactly what your vehicle needs. Whether you&#39;re dealing with a breakdown emergency or planning preventive maintenance, we connect you with quality parts that fit perfectly and last, backed by our guarantee and trusted local service."
+    cta="Get Your Parts Located Today"
+  />
+  <Header 
+    headline="Don't Let Wrong Parts Cost You Thousands in Preventable Repairs"
+    content="When you can&#39;t find the right auto parts or settle for cheap knockoffs, you&#39;re gambling with your vehicle&#39;s reliability and your safety. That minor engine noise could turn into a seized motor. Those worn brake pads you&#39;ve been putting off could fail when you need them most. The wrong transmission fluid could destroy your entire transmission system. Vehicle owners in Your City who continue shopping at parts stores that don&#39;t have what they need often end up with mismatched components that cause cascading failures throughout their vehicle systems. Without expert guidance, you risk buying parts that seem right but actually accelerate wear on other components, leading to repair bills that cost three to five times more than getting the correct parts from the start."
+    cta="Get Your Parts Located Today"
+  />
+  <Footer 
+    headline="Tired of Driving to Three Different Auto Parts Stores Just to Hear 'We Don't Have That in Stock'?"
+    content="You know the frustration all too well. Your car breaks down on a Tuesday, and by Saturday you&#39;ve visited AutoZone, O&#39;Reilly&#39;s, and NAPA - only to discover each store has a different opinion on what part you need, none of them have it in stock, and you&#39;re no closer to getting back on the road. Meanwhile, you&#39;re losing money on rideshares, borrowing cars from family, and that sinking feeling grows that you&#39;re about to get ripped off by someone who thinks you don&#39;t know anything about cars. The technical jargon, the conflicting advice, the wrong parts that don&#39;t fit - it shouldn&#39;t be this complicated to fix your vehicle."
+    cta="Get Your Parts Located Today"
+  />
+</Layout>

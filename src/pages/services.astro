@@ -1,23 +1,24 @@
 ---
-// services.astro page
-const pageTitle = 'Services';
+import Layout from '../layouts/Layout.astro';
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <main class="min-h-screen bg-gray-50 py-12">
-      <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">{pageTitle}</h1>
-        <div class="bg-white rounded-lg shadow-sm p-8">
-          <p class="text-gray-600">This is the {pageTitle.toLowerCase()} page. Content will be added here.</p>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title="Services">
+  <Layout 
+    headline="Complete Auto Parts Solutions That Get You Back on the Road Fast"
+    content="Stop wasting weekends driving from store to store only to hear &#39;we don&#39;t have that in stock.&#39; Bob&#39;s Auto connects you directly with quality OEM and aftermarket parts for any make and model. Our local supplier relationships mean we can locate hard-to-find components that big box stores can&#39;t get, often with same-day availability. Whether you need routine maintenance parts or emergency replacements, we handle the search so you can focus on getting back to your life."
+    cta="Get Your Parts Located Today"
+  />
+  <Header 
+    headline="Quality Auto Parts Located Fast - No More Wasted Store Visits"
+    content="Stop driving from store to store hoping someone has your part in stock. Bob&#39;s Auto maintains direct relationships with quality parts suppliers across Your City, giving us access to both common and hard-to-find components for all vehicle makes and models. Our parts location service means you call us once with your vehicle information, and we handle tracking down the exact part you need - whether it&#39;s brake pads for your daily commuter or a specialized sensor for your vintage truck. We verify compatibility before you buy, ensuring you get quality parts that fit perfectly the first time."
+    cta="Get Your Parts Located Today"
+  />
+  <Footer 
+    headline="From Confusion to Confidence in Three Simple Steps"
+    content="Getting the right auto parts shouldn&#39;t require a automotive engineering degree or endless trips across town. Our streamlined process eliminates the guesswork and frustration by connecting you directly with quality parts from our trusted supplier network. Within 24 hours, you&#39;ll have exactly what your vehicle needs, properly identified and quality-guaranteed, so you can get back to what matters most in your life."
+    cta="Start Your Parts Search"
+  />
+</Layout>

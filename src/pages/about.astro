@@ -1,23 +1,24 @@
 ---
-// about.astro page
-const pageTitle = 'About';
+import Layout from '../layouts/Layout.astro';
+import Layout from '../components/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <main class="min-h-screen bg-gray-50 py-12">
-      <div class="max-w-4xl mx-auto px-4">
-        <h1 class="text-4xl font-bold text-gray-900 mb-8">{pageTitle}</h1>
-        <div class="bg-white rounded-lg shadow-sm p-8">
-          <p class="text-gray-600">This is the {pageTitle.toLowerCase()} page. Content will be added here.</p>
-        </div>
-      </div>
-    </main>
-  </body>
-</html>
+<Layout title="About">
+  <Layout 
+    headline="From Frustrated Parts Hunter to Trusted Local Auto Expert"
+    content="Our founder Bob started this business after spending countless weekends driving from store to store, searching for the right parts for his family&#39;s vehicles. He was tired of getting sold inferior parts that failed within months, dealing with staff who couldn&#39;t answer basic compatibility questions, and watching his neighbors get overcharged for simple maintenance items. What began as a personal mission to find reliable parts suppliers has grown into Your City&#39;s most trusted automotive parts resource. Today, we&#39;ve built relationships with quality manufacturers and local mechanics that took years to develop, saving our customers the time and frustration we once experienced ourselves. We know exactly which parts hold up in our local climate conditions and which suppliers consistently deliver what they promise."
+    cta="Learn About Our Parts Network"
+  />
+  <Header 
+    headline="Meet the Auto Parts Experts Who Keep Your City Moving"
+    content="Behind every successful parts location at Bob&#39;s Auto is a dedicated team member who understands the frustration of being sold the wrong part or waiting weeks for a special order. Our parts specialists have collectively helped thousands of vehicle owners in Your City avoid costly mistakes and get back on the road quickly. Each team member brings unique expertise - from domestic vehicle systems to import specialties - ensuring someone on our team knows your specific make and model inside and out."
+    cta="Meet Our Parts Team"
+  />
+  <Footer 
+    headline="Honest Service Built on Your City's Trust for Over a Decade"
+    content="At Bob&#39;s Auto, our core values stem from years of watching customers get frustrated by parts stores that waste their time and mechanics who speak in confusing technical jargon. We&#39;ve built our reputation on three unwavering principles: we always tell you exactly what part you need without overselling, we source only from suppliers we trust with our own vehicles, and we never leave you guessing about costs or timelines. When you work with Bob&#39;s Auto, you&#39;re partnering with a team that treats your vehicle investment with the same care we&#39;d give our own family&#39;s cars."
+    cta="Experience Our Honest Approach"
+  />
+</Layout>

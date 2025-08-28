@@ -1,0 +1,40 @@
+```astro
+---
+import Layout from '../layouts/Layout.astro';
+import FormInfoSection from '../components/FormInfoSection.astro';
+import MapDetailsSection from '../components/MapDetailsSection.astro';
+import SimpleContactSection from '../components/SimpleContactSection.astro';
+
+const formInfoContent = {
+  headline: "Get the Auto Parts You Need Without the Runaround",
+  subheadline: "Contact Bob's Auto today and we'll locate your exact parts from our trusted supplier network - no more driving store to store only to come up empty-handed",
+  content: "Tired of wasting your weekend visiting three different auto parts stores, only to hear \"we don't have that in stock\" at each one? At Bob's Auto, we cut through the frustration by using our established relationships with quality suppliers throughout Your City to track down exactly what your vehicle needs. Simply give us a call or fill out our quick parts request form with your vehicle information, and we'll have an answer within hours - not days. Whether you need brake pads for your 2015 Honda Civic or a water pump for your F-150, we handle the legwork so you can get back to what matters most.",
+  cta: "Get Your Parts Located Today"
+};
+
+const mapDetailsContent = {
+  headline: "Visit Bob's Auto or Call Us Today",
+  subheadline: "Get your vehicle back on the road with the right parts - we're here when you need us",
+  content: "Located in the heart of Your City, Bob's Auto is easily accessible when your vehicle needs quality parts fast. Our experienced team is ready to help you identify exactly what your car needs and locate those parts through our trusted supplier network. We respond to calls within 2 hours during business hours and can often have your parts ready for pickup the same day. Whether you prefer to visit our location or call ahead, we make getting the right auto parts as convenient as possible for busy vehicle owners.",
+  cta: "Call Now for Parts Help"
+};
+
+const simpleContactContent = {
+  headline: "Get Your Auto Parts Questions Answered in Minutes",
+  subheadline: "Speak directly with our parts experts who know Your City vehicles inside and out",
+  content: "Stop wasting time calling around to parts stores that put you on hold or transfer you to someone who doesn't know your vehicle. Our experienced team responds to calls and messages within 2 hours during business days, often much faster. We'll listen to your specific situation, ask the right questions about your vehicle, and give you straight answers about parts availability, pricing, and installation recommendations. Whether you need an immediate emergency part or want to plan ahead for maintenance, we make it simple to get the expert guidance you deserve.",
+  cta: "Call Now for Immediate Help"
+};
+---
+
+<Layout 
+  title="Contact Bob's Auto - Get the Auto Parts You Need Fast | Your Business"
+  description="Contact Bob's Auto for fast, reliable auto parts in Your City. We locate parts through our supplier network so you don't have to drive store to store. Call today!"
+>
+  <main>
+    <FormInfoSection {...formInfoContent} />
+    <MapDetailsSection {...mapDetailsContent} />
+    <SimpleContactSection {...simpleContactContent} />
+  </main>
+</Layout>
+```

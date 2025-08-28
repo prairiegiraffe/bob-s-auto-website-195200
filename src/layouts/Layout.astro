@@ -1,191 +1,156 @@
-```astro
 ---
-// Component imports
+// All imports and TypeScript code goes here in the frontmatter
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 
-// TypeScript interface for component props
 export interface Props {
   title: string;
   description?: string;
   keywords?: string;
   ogImage?: string;
-  canonicalURL?: string;
 }
 
-// Destructure props with defaults
 const { 
   title, 
-  description = "Your Business - Professional local service business providing quality solutions for your community.",
-  keywords = "local service, business, professional services, community, quality solutions",
-  ogImage = "/og-image.jpg",
-  canonicalURL = Astro.url.href
+  description = 'Professional local service business providing reliable and expert services to your community. Contact us today for all your service needs.',
+  keywords = 'local service, professional services, reliable business, community services',
+  ogImage = '/og-image.jpg'
 } = Astro.props;
-
-// Site configuration
-const siteTitle = "Your Business";
-const fullTitle = title === siteTitle ? title : `${title} | ${siteTitle}`;
 ---
 
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
   <head>
-    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <!-- SEO Meta Tags -->
-    <title>{fullTitle}</title>
     <meta name="description" content={description} />
     <meta name="keywords" content={keywords} />
-    <meta name="author" content="Your Business" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     
-    <!-- Canonical URL -->
-    <link rel="canonical" href={canonicalURL} />
-    
-    <!-- Open Graph Meta Tags -->
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={fullTitle} />
+    <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImage} />
-    <meta property="og:url" content={canonicalURL} />
-    <meta property="og:site_name" content={siteTitle} />
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImage} />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={ogImage} />
     
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <!-- Google Fonts - Inter and Poppins -->
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" 
-      rel="stylesheet"
-    />
-    
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#3B82F6" />
-    <meta name="msapplication-navbutton-color" content="#3B82F6" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    
-    <!-- Additional Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <meta name="format-detection" content="telephone=no" />
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Your Business",
-        "description": "Professional local service business providing quality solutions for your community.",
-        "url": "https://yourbusiness.com",
-        "@id": "https://yourbusiness.com",
-        "priceRange": "$$"
-      }
-    </script>
-  </head>
-  
-  <body class="font-inter antialiased bg-white text-gray-900 selection:bg-blue-500 selection:text-white">
-    <!-- Skip to main content link for accessibility -->
-    <a 
-      href="#main-content" 
-      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium z-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-    >
-      Skip to main content
-    </a>
-    
-    <!-- Header Component -->
-    <Header />
-    
-    <!-- Main Content -->
-    <main id="main-content" class="min-h-screen">
-      <slot />
-    </main>
-    
-    <!-- Footer Component -->
-    <Footer />
-    
-    <!-- Scroll to Top Button -->
-    <button 
-      id="scroll-to-top" 
-      class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 opacity-0 invisible focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 z-40"
-      aria-label="Scroll to top"
-    >
-      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
-      </svg>
-    </button>
-    
+    <!-- Custom Styles -->
     <style>
-      /* Custom CSS Variables */
       :root {
         --primary-color: #3B82F6;
         --primary-dark: #2563EB;
         --primary-light: #60A5FA;
+        --text-dark: #1F2937;
+        --text-medium: #4B5563;
+        --text-light: #6B7280;
+        --bg-light: #F9FAFB;
+        --border-color: #E5E7EB;
       }
       
-      /* Font Family Classes */
       .font-inter {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       }
       
       .font-poppins {
-        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
       }
       
-      /* Smooth scrolling for older browsers */
-      html {
-        scroll-behavior: smooth;
+      .btn-primary {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-weight: 500;
+        text-decoration: none;
+        display: inline-block;
+        transition: background-color 0.2s ease;
       }
       
-      /* Focus styles for better accessibility */
-      *:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 2px;
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+      
+      .text-primary {
+        color: var(--primary-color);
+      }
+      
+      .bg-primary {
+        background-color: var(--primary-color);
+      }
+      
+      .border-primary {
+        border-color: var(--primary-color);
+      }
+      
+      .section-padding {
+        padding: 80px 0;
+      }
+      
+      @media (max-width: 768px) {
+        .section-padding {
+          padding: 60px 0;
+        }
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      .fade-in {
+        animation: fadeIn 0.6s ease-in;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
       }
     </style>
     
+    <title>{title}</title>
+  </head>
+  <body class="font-inter bg-white text-gray-900 antialiased">
+    <Header />
+    <main class="min-h-screen">
+      <slot />
+    </main>
+    <Footer />
+    
+    <!-- Smooth scroll behavior -->
     <script>
-      // Scroll to top button functionality
-      document.addEventListener('DOMContentLoaded', function() {
-        const scrollToTopBtn = document.getElementById('scroll-to-top');
-        
-        if (scrollToTopBtn) {
-          // Show/hide scroll to top button
-          window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-              scrollToTopBtn.classList.remove('opacity-0', 'invisible');
-              scrollToTopBtn.classList.add('opacity-100', 'visible');
-            } else {
-              scrollToTopBtn.classList.add('opacity-0', 'invisible');
-              scrollToTopBtn.classList.remove('opacity-100', 'visible');
-            }
-          });
-          
-          // Scroll to top when button is clicked
-          scrollToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            });
-          });
-        }
+      document.documentElement.style.scrollBehavior = 'smooth';
+      
+      // Add fade-in animation to elements when they come into view
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all sections for animation
+      document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section, .animate-on-scroll');
+        sections.forEach(section => observer.observe(section));
       });
     </script>
   </body>
 </html>
-```

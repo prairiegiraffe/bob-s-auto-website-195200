@@ -1,64 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import HeroSection from '../components/HeroSection.astro';
-import StakesSection from '../components/StakesSection.astro';
-import ProblemSection from '../components/ProblemSection.astro';
-import GuideSection from '../components/GuideSection.astro';
-import PlanStepsSection from '../components/PlanStepsSection.astro';
-import CallToActionSection from '../components/CallToActionSection.astro';
-import SuccessFailureSection from '../components/SuccessFailureSection.astro';
+// index.astro page
+const pageTitle = 'Index';
 ---
 
-<Layout 
-  title="Bob's Auto - Stop Wasting Time on Parts Store Runs | Quality Auto Parts Your City"
-  description="Stop driving to multiple auto parts stores. Bob's Auto locates the exact quality parts your vehicle needs the first time. No more wrong parts or endless searching."
->
-  <HeroSection
-    headline="Stop Wasting Time on Parts Store Runs That Leave You Empty-Handed"
-    subheadline="Bob's Auto locates the exact quality parts your vehicle needs the first time, so you can get back on the road without the frustration of endless searching"
-    content="Tired of driving to three different auto parts stores only to hear 'we'll have to order that' or getting sold the wrong part that doesn't fit? Bob's Auto eliminates the guesswork and wasted trips by leveraging our extensive supplier network and local automotive expertise to locate exactly what your vehicle needs. Whether you're dealing with a breakdown emergency or planning preventive maintenance, we connect you with quality parts that fit perfectly and last, backed by our guarantee and trusted local service."
-    ctaText="Get Your Parts Located Today"
-  />
-
-  <StakesSection
-    headline="Don't Let Wrong Parts Cost You Thousands in Preventable Repairs"
-    subheadline="Every day you drive with incorrect or failing parts puts your vehicle at risk of catastrophic breakdowns that could strand you or require expensive emergency repairs"
-    content="When you can't find the right auto parts or settle for cheap knockoffs, you're gambling with your vehicle's reliability and your safety. That minor engine noise could turn into a seized motor. Those worn brake pads you've been putting off could fail when you need them most. The wrong transmission fluid could destroy your entire transmission system. Vehicle owners in Your City who continue shopping at parts stores that don't have what they need often end up with mismatched components that cause cascading failures throughout their vehicle systems. Without expert guidance, you risk buying parts that seem right but actually accelerate wear on other components, leading to repair bills that cost three to five times more than getting the correct parts from the start."
-    ctaText="Get Your Parts Located Today"
-  />
-
-  <ProblemSection
-    headline="Tired of Driving to Three Different Auto Parts Stores Just to Hear 'We Don't Have That in Stock'?"
-    subheadline="Stop wasting your weekends searching for the right parts while your car sits broken in the driveway"
-    content="You know the frustration all too well. Your car breaks down on a Tuesday, and by Saturday you've visited AutoZone, O'Reilly's, and NAPA - only to discover each store has a different opinion on what part you need, none of them have it in stock, and you're no closer to getting back on the road. Meanwhile, you're losing money on rideshares, borrowing cars from family, and that sinking feeling grows that you're about to get ripped off by someone who thinks you don't know anything about cars. The technical jargon, the conflicting advice, the wrong parts that don't fit - it shouldn't be this complicated to fix your vehicle."
-    ctaText="Get Your Parts Located Today"
-  />
-
-  <GuideSection
-    headline="Your Local Auto Parts Experts Who Actually Know Your City's Vehicles"
-    subheadline="We've been serving Your City drivers for years, helping them avoid the frustration of wrong parts and endless store visits"
-    content="At Bob's Auto, we understand the sinking feeling when you're told 'we don't have that part' for the third time this week. That's exactly why we built our extensive network of trusted suppliers who stock parts for the vehicles actually driven in Your City. Our years of experience serving local drivers means we know which brands hold up to our climate conditions, which parts fail most often on popular local vehicle models, and exactly where to source quality components that fit right the first time. When you work with us, you're not just getting parts – you're getting the peace of mind that comes from partnering with people who genuinely care about keeping your vehicle running reliably."
-    ctaText="Get Expert Parts Help Now"
-  />
-
-  <PlanStepsSection
-    headline="Get Your Parts in Three Simple Steps"
-    subheadline="No more driving store to store hoping someone has what you need - we handle the searching for you"
-    content="Stop wasting your weekends visiting multiple auto parts stores that don't have your specific component in stock. Our streamlined process connects you with the exact parts your vehicle needs through our established network of quality suppliers. Within hours of your inquiry, we'll confirm availability, secure your parts, and arrange the most convenient way for you to get them - whether that's same-day pickup at our location or direct delivery to your preferred mechanic."
-    ctaText="Get Your Parts Located Today"
-  />
-
-  <CallToActionSection
-    headline="Stop Wasting Time on Parts Store Visits That Leave You Empty-Handed"
-    subheadline="Get the exact auto parts your vehicle needs with Bob's Auto's guaranteed parts location service - no more driving around Your City searching for parts that actually fit"
-    content="Every day you delay getting the right parts is another day your vehicle problems get worse and more expensive to fix. Bob's Auto has helped hundreds of Your City drivers avoid the frustration of buying wrong parts or settling for cheap knockoffs that fail within months. When you work with us, you get quality parts located fast, expert guidance you can trust, and the peace of mind that comes from knowing your vehicle is properly maintained. Don't let another week go by wondering if your car will start tomorrow morning."
-    ctaText="Get Your Parts Located Today"
-  />
-
-  <SuccessFailureSection
-    headline="Don't Let Wrong Parts Leave You Stranded on Your City Roads"
-    subheadline="The choice is clear: get quality parts that keep you moving, or risk costly breakdowns that could have been prevented"
-    content="When you partner with Bob's Auto, you join hundreds of Your City vehicle owners who drive confidently knowing their cars are equipped with quality parts that fit perfectly and last. You'll save an average of 3-4 hours per repair by avoiding multiple parts store visits, and you'll prevent the costly cycle of buying cheap parts that fail within months. Most importantly, you'll have peace of mind knowing your vehicle is reliable for your daily commute, family trips, and emergency situations. But if you continue the frustrating hunt through big box stores and online retailers, you'll keep wasting precious time and money on parts that don't fit or fail prematurely. Worse yet, the wrong parts can cause additional damage to your vehicle, turning a simple repair into an expensive major overhaul that could leave you without transportation when you need it most."
-    ctaText="Get Your Parts Located Today"
-  />
-</Layout>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <main class="min-h-screen bg-gray-50 py-12">
+      <div class="max-w-4xl mx-auto px-4">
+        <h1 class="text-4xl font-bold text-gray-900 mb-8">{pageTitle}</h1>
+        <div class="bg-white rounded-lg shadow-sm p-8">
+          <p class="text-gray-600">This is the {pageTitle.toLowerCase()} page. Content will be added here.</p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
